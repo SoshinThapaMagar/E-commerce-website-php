@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.container-title {
+  position: relative;
+}
+
+.container-title::after {
+  content: '';
+  width: 100px;
+  height: 5px;
+  background-color: #428035;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+footer {
+  margin-top: 200px;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+footer .footer-container {
+  width: 65%;
+  margin: auto;
+  padding: 6rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-container .social-section {
+  width: 70%;
+}
+
+footer .footer-container .social-section div {
+  width: 100px;
+  height: 100px;
+}
+
+footer .footer-container .social-section div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+
+footer .footer-container .newsletter-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer .footer-container .newsletter-section input,
+footer .footer-container .newsletter-section button {
+  width: 100%;
+}
+
+footer .footer-container .newsletter-section input {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 7px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+footer .footer-container .newsletter-section button {
+  color: black;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 1400px) {
+  footer .footer-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  footer .footer-container .social-section {
+    width: 40%;
+  }
+  footer .footer-container .newsletter-section {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  footer .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-container .social-section {
+    margin-bottom: 50px;
+  }
+  footer .footer-container .social-section,
+  footer .footer-container .newsletter-section {
+    width: 100%;
+  }
+}
+
+footer svg {
+  fill: white;
+  margin-right: 40px;
+}
+
+.unauthorized-container {
+  min-height: 40vh;
+  margin-top: 200px;
+  text-align-last: center;
+}
+
+.unauthorized-container h1 {
+  font-weight: 900;
+  font-size: 10rem;
+  color: #c9c9c5;
+}
+
+.unauthorized-container p {
+  margin: auto;
+  font-weight: bold;
+  width: 500px;
+}
+
+.unauthorized-container a {
+  display: inline-block;
+  margin-top: 40px;
+  color: black;
+  text-decoration: none;
+  background-color: #f7b61b;
+  padding: 0.7rem 2rem;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.products-container {
+  width: 900px;
+  min-height: 30vh;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.products-container .product-headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.products-container .product-headers form {
+  width: 300px;
+  border: 1px solid #c9c9c5;
+  padding: 0.5rem 1.5rem;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.products-container .product-headers form input {
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  outline: none;
+}
+
+.products-container .product-headers form button {
+  background-color: transparent;
+  border: none;
+}
+
+.products-container .product-headers form button svg {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.products-container .products {
+  margin-top: 50px;
+  padding: 2rem;
+  border-radius: 7px;
+  border: 1px solid #c9c9c5;
+}
+
+.products-container .products .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products-container .products .product .product-id {
+  width: 8%;
+  font-weight: bold;
+  color: lightslategray;
+  font-size: 1.5rem;
+}
+
+.products-container .products .product .product-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products-container .products .product .product-info .product-image {
+  height: 55px;
+  width: 55px;
+  margin-right: 20px;
+}
+
+.products-container .products .product .product-info .product-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px;
+}
+
+.products-container .products .product .product-info div .product-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.products-container .products .product .product-info div .trader-name {
+  font-weight: 500;
+}
+
+.products-container .products .product:not(:last-child) {
+  border-bottom: 1px solid #c9c9c5;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.products-container .products .product a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.products-container .products .product .disabled {
+  background-color: #e4382f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 1000px) {
+  .products-container {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=products.css.map */

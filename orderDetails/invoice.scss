@@ -1,0 +1,73 @@
+@import '../index.scss';
+
+.invoice-container {
+    min-height: 50vh;
+    width: 60%;
+    margin: auto;
+    margin-top: 80px !important;
+    border: 1px solid $gray-dark;
+    border-radius: 15px;
+    padding: 2rem 3rem;
+
+    .invoice-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-logo {
+            height: 50px;
+            width: 200px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: left;
+            }
+        }
+
+        .header-date {
+            font-weight: bold;
+        }
+    }
+
+    .invoice-details {
+        margin-top: 70px;
+    }
+
+    .order-details {
+        table {
+            border-collapse: collapse;
+            margin-top: 70px;
+            width: 100%;
+            text-align: left;
+
+            thead {
+                color: $gray-dark;
+                text-transform: uppercase;
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 20px 0px;
+                        margin: 20px 0px;
+                        border-bottom: 1px solid $gray-dark;
+                    }
+
+                    .total-price {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .order-summary {
+        margin-top: 70px;
+    }
+
+    @media screen and (max-width: $medium) {
+        width: 90%;
+    }
+}

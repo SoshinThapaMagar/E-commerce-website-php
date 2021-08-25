@@ -1,0 +1,73 @@
+@import '../index.scss';
+
+.add-container {
+    min-height: 30vh;
+    margin-top: 150px;
+
+    .container-title {
+        margin-bottom: 50px;
+    }
+
+    .error-message {
+        font-weight: bold;
+        color: $red-primary;
+    }
+
+    .success-message {
+        font-weight: bold;
+        color: $green-primary;
+    }
+
+    .form-container {
+        width: 50%;
+        margin: auto;
+        border: 1px solid $gray-dark;
+        border-radius: 15px;
+        padding: 1.5rem 3rem;
+
+        form {
+            input {
+                width: 100%;
+                padding: 0.5rem 1rem;
+                border-radius: 7px;
+                margin-bottom: 10px;
+                border: 1px solid $gray-dark;
+            }
+
+            .add-button {
+                cursor: pointer;
+                background-color: $yellow-primary;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                padding: 0.8rem 0rem;
+                margin-top: 20px;
+            }
+
+            .form-actions {
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    width: 48%;
+                }
+
+                .delete-button {
+                    @extend .add-button;
+                    color: $red-primary;
+                    border: 1px solid $red-primary;
+                    background-color: transparent;
+
+                    &:hover {
+                        background-color: $red-primary;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        @media screen and(max-width:$medium) {
+            width: 90%;
+        }
+    }
+}

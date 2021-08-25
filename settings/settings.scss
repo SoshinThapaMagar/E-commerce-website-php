@@ -1,0 +1,70 @@
+@import '../index.scss';
+
+.container {
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+
+    .profile-settings {
+        padding: 2rem;
+        border: 1px solid $gray-dark;
+        border-radius: 15px;
+
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        .error-msg {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: $red-dark !important;
+        }
+
+        .success-msg {
+            @extend .error-msg;
+            color: $green-primary !important;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 7px;
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .cancel-button {
+            margin-top: 20px;
+            margin-left: auto;
+            border: none;
+            background-color: transparent;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .save-button {
+            background-color: $yellow-primary;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 7px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .account-settings {
+        margin-top: 100px;
+        @extend .profile-settings;
+    }
+
+    @media screen and (max-width: $medium-large) {
+        width: 70%;
+    }
+
+    @media screen and (max-width: $medium) {
+        width: 90%;
+    }
+}

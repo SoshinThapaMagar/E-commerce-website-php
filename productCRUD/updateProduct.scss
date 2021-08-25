@@ -1,0 +1,156 @@
+@import '../index.scss';
+
+.update-container {
+    min-height: 30vh;
+    margin-top: 150px;
+
+    .form-container {
+        width: 60%;
+        margin: auto;
+        border: 1px solid $gray-dark;
+        border-radius: 15px;
+        padding: 1.5rem 3rem;
+
+        .container-title {
+            margin-bottom: 50px;
+        }
+
+        .success-message {
+            color: $green-primary;
+        }
+
+        form {
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .product-image {
+                flex-basis: 45%;
+                height: 600px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 7px;
+                }
+            }
+
+            .product-details {
+                flex-basis: 50%;
+
+                input,
+                select,
+                textarea {
+                    width: 100%;
+                    padding: 0.5rem 1rem;
+                    border-radius: 7px;
+                    margin-bottom: 10px;
+                    border: 1px solid $gray-dark;
+                }
+
+                .product-buttons {
+                    display: flex;
+                    justify-content: space-between;
+
+                    input {
+                        flex-basis: 48%;
+                    }
+
+                    .update-button {
+                        background-color: $yellow-primary;
+                        font-weight: bold;
+                        border: none;
+                        cursor: pointer;
+                        padding: 0.8rem 0rem;
+                        margin-top: 20px;
+                    }
+
+                    .delete-button {
+                        @extend .update-button;
+                        color: $red-primary;
+                        border: 1px solid $red-primary;
+                        background-color: transparent;
+
+                        &:hover {
+                            background-color: $red-primary;
+                            color: white;
+                        }
+                    }
+                }
+
+                .product-price {
+                    display: flex;
+                    justify-content: space-between;
+
+                    input {
+                        flex-basis: 48%;
+                    }
+                }
+            }
+
+            @media screen and(max-width: $medium) {
+                flex-direction: column;
+
+                .product-image {
+                    margin-bottom: 50px;
+                }
+
+                .product-image,
+                .product-details {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and(max-width: $large) {
+            width: 70%;
+        }
+
+        @media screen and(max-width: $medium-large) {
+            width: 90%;
+        }
+    }
+
+    .reviews-container {
+        width: 60%;
+        margin: auto;
+        margin-top: 100px;
+
+        @media screen and(max-width: $large) {
+            width: 70%;
+        }
+
+        @media screen and(max-width: $medium-large) {
+            width: 90%;
+        }
+
+        .comments {
+            margin-top: 50px;
+
+            .comment {
+                display: flex;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+
+                svg {
+                    margin-right: 10px;
+                }
+
+                .comment-info {
+                    flex: 1;
+
+                    .user-name {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $gray-dark;
+                }
+            }
+        }
+    }
+}

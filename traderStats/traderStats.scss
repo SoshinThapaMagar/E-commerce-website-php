@@ -1,0 +1,114 @@
+@import '../index.scss';
+
+.container {
+    width: 65%;
+    margin: auto;
+    margin-top: 150px;
+
+    .table-headers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        form {
+            width: 300px;
+            border: 1px solid $gray-dark;
+            padding: 0.5rem 1.5rem;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+                border: none;
+                flex: 1;
+                height: 100%;
+                outline: none;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+
+                svg {
+                    transform: scale(0.7);
+                }
+            }
+        }
+    }
+
+    table {
+        margin-top: 60px;
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
+
+        svg {
+            transform: scale(0.8);
+            cursor: pointer;
+        }
+
+        thead {
+            color: $gray-dark;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        tbody {
+            font-weight: bold;
+
+            tr {
+                td {
+                    padding: 0.7rem 0rem;
+                    border-bottom: 1px solid $gray-dark;
+
+                    &:first-child {
+                        color: $gray-dark;
+                    }
+                }
+
+                &:first-child {
+                    td {
+                        padding-top: 30px;
+                    }
+                }
+
+                &:last-child {
+                    td {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+
+    h3 {
+        margin-top: 30px;
+    }
+
+    .shop-container {
+        position: relative;
+        margin-bottom: 100px;
+
+        .add-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .product-container {
+        position: relative;
+
+        .add-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    @media screen and (max-width: $medium-large) {
+        width: 90%;
+    }
+}

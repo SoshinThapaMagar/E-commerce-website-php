@@ -1,0 +1,113 @@
+@import '../index.scss';
+
+.products-container {
+    width: 900px;
+    min-height: 30vh;
+    margin: auto;
+    margin-top: 100px;
+
+    .product-headers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        form {
+            width: 300px;
+            border: 1px solid $gray-dark;
+            padding: 0.5rem 1.5rem;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+                border: none;
+                flex: 1;
+                height: 100%;
+                outline: none;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+
+                svg {
+                    transform: scale(0.7);
+                }
+            }
+        }
+    }
+
+    .products {
+        margin-top: 50px;
+        padding: 2rem;
+        border-radius: 7px;
+        border: 1px solid $gray-dark;
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .product-id {
+                width: 8%;
+                font-weight: bold;
+                color: lightslategray;
+                font-size: 1.5rem;
+            }
+
+            .product-info {
+                flex: 1;
+                display: flex;
+                align-items: center;
+
+                .product-image {
+                    height: 55px;
+                    width: 55px;
+                    margin-right: 20px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 7px;
+                    }
+                }
+
+                div {
+                    .product-name {
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+
+                    .trader-name {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $gray-dark;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+
+            a {
+                color: black;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .disabled {
+                background-color: $red-dark;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 7px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        width: 90%;
+    }
+}

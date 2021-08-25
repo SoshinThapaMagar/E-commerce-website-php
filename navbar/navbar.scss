@@ -1,0 +1,170 @@
+@import '../index.scss';
+
+nav {
+    position: relative;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+
+    .nav-container {
+        width: 80%;
+        height: 6vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            font-weight: 800;
+            flex-basis: 30%;
+
+            div {
+                width: 100px;
+                height: 100%;
+                background-color: $yellow-primary;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                border-radius: 0px 0px 7px 7px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .nav-links {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+
+            li {
+                margin-right: 35px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    sup {
+                        background-color: $green-primary;
+                        color: white;
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        padding: 0 3px;
+                        border-radius: 50%;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+
+        .nav-links-full {
+            @extend .nav-links;
+            flex: 0;
+            flex-basis: 40%;
+        }
+
+        .function-tray {
+            flex-basis: 30%;
+            justify-self: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            form {
+                svg {
+                    transform: scale(0.8);
+                    cursor: pointer;
+                }
+
+                .navbar-search-input {
+                    padding: 0;
+                    border: 1px solid black;
+                    margin: 0px 1rem;
+                    width: 0px;
+                    transform: translateY(-5px);
+                    transition: 0.2s ease-in-out;
+                    background-color: transparent;
+                }
+
+                .search-input-expanded {
+                    border-radius: 5px;
+                    padding: 0.5rem;
+                    width: 200px;
+                }
+            }
+
+            .user-icon {
+                margin-right: 5px;
+            }
+
+            .user-name {
+                font-weight: bold;
+                color: black;
+                text-decoration: none;
+            }
+        }
+
+        .hamburger-menu {
+            display: none;
+        }
+
+        @media screen and (max-width: $large) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: $medium-large) {
+            .logo,
+            .function-tray {
+                flex-basis: 20%;
+            }
+        }
+
+        @media screen and (max-width: $medium) {
+            .function-tray {
+                margin-right: 30px;
+                flex: 1;
+            }
+
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav-links {
+                position: absolute;
+                flex-direction: column;
+                background-color: $yellow-primary;
+                width: 50%;
+                height: 94vh;
+                top: 6vh;
+                right: -100%;
+                transition: 0.3s ease-in-out;
+
+                li {
+                    margin: 0px;
+                }
+            }
+
+            .expanded-nav-link {
+                right: 0;
+            }
+        }
+
+        @media screen and (max-width: $small) {
+            .nav-links {
+                width: 100%;
+            }
+        }
+    }
+}

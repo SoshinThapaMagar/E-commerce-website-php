@@ -1,0 +1,46 @@
+@import '../index.scss';
+
+.order-container {
+    min-height: 60vh;
+    width: 50%;
+    margin: auto;
+    margin-top: 80px !important;
+
+    .orders {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 20px;
+
+        .order {
+            border: 1px solid $gray-dark;
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            position: relative;
+
+            a {
+                color: black;
+                text-decoration: none;
+
+                h2 {
+                    margin-bottom: 5px;
+                }
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            .delivered-order {
+                position: absolute;
+                right: 1.5rem;
+                top: 35%;
+                fill: $green-primary;
+            }
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        width: 90%;
+    }
+}

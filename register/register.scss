@@ -1,0 +1,73 @@
+@import '../index.scss';
+
+.register-container {
+    margin-top: 150px;
+    min-height: 40vh;
+
+    .form-container {
+        width: 700px;
+        margin: auto;
+
+        .login-page-link {
+            color: black;
+            text-decoration: none;
+            border: 0.5px solid $gray-dark;
+            padding: 0.4rem 0.8rem;
+            border-radius: 7px;
+            margin-right: 15px;
+        }
+
+        .active-login-link {
+            color: $green-primary;
+            border: 1px solid $green-primary;
+        }
+
+        form {
+            margin-top: 35px;
+            padding: 2rem 2.5rem;
+            border: 0.5px solid $gray-dark;
+            border-radius: 15px;
+
+            h2 {
+                margin-bottom: 35px;
+            }
+
+            input,
+            select {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 0.5rem 1rem;
+                border-radius: 7px;
+                border: 0.5px solid $gray-dark;
+            }
+
+            .submit-btn {
+                padding: 0.8rem 0rem;
+                background-color: $yellow-primary;
+                cursor: pointer;
+                font-weight: bold;
+                border: none;
+            }
+
+            .login-link {
+                color: black;
+                text-decoration: none;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        @media screen and (max-width: $medium) {
+            width: 90%;
+        }
+    }
+}
+
+.error {
+    background-color: $red-primary;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+}
